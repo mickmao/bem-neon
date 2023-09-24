@@ -1,11 +1,8 @@
 {
 	"name": "bem-neon",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"description": "BEM (Block, Element, Modifier) syntax parser for Node.js, implemented in Rust.",
 	"main": "bem.node",
-	"bin": {
-		"bem": "./bem.node"
-	},
 	"files": [
 		"artifacts",
 		"install.js",
@@ -28,5 +25,8 @@
 	],
 	"devDependencies": {
 		"cargo-cp-artifact": "^0.1"
+	},
+	"dependencies": {
+		"mkdirp": "^3.0.1"
 	}
 }
