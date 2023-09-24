@@ -1,5 +1,5 @@
 {
-	"name": "@vortex-design/bem",
+	"name": "bem-neon",
 	"version": "0.2.0",
 	"description": "BEM (Block, Element, Modifier) syntax parser for Node.js, implemented in Rust.",
 	"main": "bem.node",
