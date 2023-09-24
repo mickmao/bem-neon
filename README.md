@@ -1,5 +1,7 @@
 # bem-neon
 
+[![Build & Release](https://github.com/vortex-design/bem-node/actions/workflows/release.yml/badge.svg)](https://github.com/vortex-design/bem-node/actions/workflows/release.yml)
+
 BEM (Block, Element, Modifier) syntax parser for Node.js, implemented in Rust.
 
 This project was bootstrapped by [create-neon](https://www.npmjs.com/package/create-neon).
