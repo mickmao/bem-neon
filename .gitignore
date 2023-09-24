@@ -131,7 +131,9 @@ dist
 
 # neon
 target
-index.node
+bem.node
 **/node_modules
 **/.DS_Store
 npm-debug.log*
+
+artifacts/
