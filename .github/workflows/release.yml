@@ -1,4 +1,4 @@
-name: Build, Upload & Release
+name: Build & Release
 
 on:
   push:
@@ -71,7 +71,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          registry-url: 'https://registry.npmjs.org/'
 
       - name: Download All Artifacts
         uses: actions/download-artifact@v3
