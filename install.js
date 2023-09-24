@@ -1,7 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
-const { mkdirp } = require('mkdirp')
 
 const platform = os.platform()
 const arch = os.arch()
@@ -37,17 +36,8 @@ if (!binaryPath) {
 	process.exit(1)
 }
 
-const actualPath = path.join(__dirname, 'artifacts', binaryPath, 'bem.node')
-
 // Copy the binary to the appropriate location
-fs.copyFileSync(actualPath, path.join(__dirname, 'bem.node'))
-
-const binDir = path.join(__dirname, 'node_modules', '.bin')
-mkdirp.sync(binDir)
-
-const symlinkPath = path.join(binDir, 'bem')
-
-fs.symlink(actualPath, symlinkPath, 'file', (err) => {
-	if (err) console.error('Error creating symlink:', err)
-	else console.log('Symlink created')
-})
+fs.copyFileSync(
+	path.join(__dirname, 'artifacts', binaryPath, 'bem.node'),
+	path.join(__dirname, 'bem.node')
+)
