@@ -1,10 +1,12 @@
 {
 	"name": "bem-neon",
-	"version": "0.2.5",
+	"version": "1.0.0",
 	"description": "BEM (Block, Element, Modifier) syntax parser for Node.js, implemented in Rust.",
 	"main": "bem.node",
+	"types": "bem.node.d.ts",
 	"files": [
 		"artifacts",
+		"bem.node.d.ts",
 		"install.js",
 		"LICENSE",
 		"README.md"
