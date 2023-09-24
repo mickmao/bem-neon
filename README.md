@@ -11,7 +11,7 @@ Installing `@vortex-design/bem` requires a [supported version of Node and Rust](
 You can install the project with npm. In the project directory, run:
 
 ```sh
-npm install
+npm install --ignore-scripts
 ```
 
 This fully installs the project, including installing any dependencies and running the build.
@@ -45,27 +45,27 @@ $ node
 
 In the project directory, you can run:
 
-### `npm install`
+### `npm install --ignore-scripts`
 
 Installs the project, including running `npm run build`.
 
-### `npm build`
+### `npm run build`
 
 Builds the Node addon (`bem.node`) from source.
 
-Additional [`cargo build`](https://doc.rust-lang.org/cargo/commands/cargo-build.html) arguments may be passed to `npm build` and `npm build-*` commands. For example, to enable a [cargo feature](https://doc.rust-lang.org/cargo/reference/features.html):
+Additional [`cargo build`](https://doc.rust-lang.org/cargo/commands/cargo-build.html) arguments may be passed to `npm run build` and `npm run build-*` commands. For example, to enable a [cargo feature](https://doc.rust-lang.org/cargo/reference/features.html):
 
 ```sh
 npm run build -- --feature=beetle
 ```
 
-#### `npm build-debug`
+#### `npm run build-debug`
 
-Alias for `npm build`.
+Alias for `npm run build`.
 
-#### `npm build-release`
+#### `npm run build-release`
 
-Same as [`npm build`](#npm-build) but, builds the module with the [`release`](https://doc.rust-lang.org/cargo/reference/profiles.html#release) profile. Release builds will compile slower, but run faster.
+Same as [`npm run build`](#npm-run-build) but, builds the module with the [`release`](https://doc.rust-lang.org/cargo/reference/profiles.html#release) profile. Release builds will compile slower, but run faster.
 
 ### `npm test`
 
