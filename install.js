@@ -37,11 +37,15 @@ if (!binaryPath) {
 	process.exit(1)
 }
 
+const actualPath = path.join(__dirname, 'artifacts', binaryPath, 'bem.node')
+
+// Copy the binary to the appropriate location
+fs.copyFileSync(actualPath, path.join(__dirname, 'bem.node'))
+
 const binDir = path.join(__dirname, 'node_modules', '.bin')
 mkdirp.sync(binDir)
 
 const symlinkPath = path.join(binDir, 'bem')
-const actualPath = path.join(__dirname, 'artifacts', binaryPath, 'bem.node')
 
 fs.symlink(actualPath, symlinkPath, 'file', (err) => {
 	if (err) console.error('Error creating symlink:', err)
