@@ -72,17 +72,17 @@ jobs:
         with:
           path: ./artifacts/
 
-      - name: Create GitHub Release
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: ${{ github.ref }}
-          name: Release ${{ github.ref }}
-          body: Description of the release
-          draft: false
-          prerelease: false
-          files: ./artifacts/**/bem.node
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Create GitHub Release
+      #   uses: softprops/action-gh-release@v1
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     name: Release ${{ github.ref }}
+      #     body: Description of the release
+      #     draft: false
+      #     prerelease: false
+      #     files: ./artifacts/**/bem.node
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish NPM Package
         run: npm publish
